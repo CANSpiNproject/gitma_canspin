@@ -1,0 +1,3 @@
+[run]
+omit = 
+    gitma_canspin/tests/*

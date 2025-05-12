@@ -1,0 +1,19 @@
+---
+corpus:
+  title: "CANSpiN-deu-19"
+  
+texts:
+  030:
+    title: "Die verlorene Handschrift"
+    author: "Freytag, Gustav"
+    year: 1864
+    source: "CANSpiN-deu-19_030.xml"
+    structural_units:
+      - "Theil"
+      - "Buch"
+      - "(Kapitel)"
+    annotations:
+      cs1:
+        1:
+          1:
+            1: "CANSpiN-deu-19_030_1-1-1.tsv"

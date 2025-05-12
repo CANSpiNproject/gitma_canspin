@@ -1,0 +1,22 @@
+{
+  "gitContentInfoSet": {
+    "author": "Ernst Adolf Willkomm",
+    "description": "Weisse Sclaven oder die Leiden des Volkes",
+    "publisher": "",
+    "title": "DEU-19_001"
+  },
+  "gitIndexInfoSet": {
+    "locale": "de",
+    "unseparableCharacterSequences": [],
+    "userDefinedSeparatingCharacters": []
+  },
+  "gitTechInfoSet": {
+    "charset": "UTF-8",
+    "checksum": 397260307,
+    "fileName": "DEU001.xml",
+    "fileOSType": "UNIX",
+    "fileType": "TEXT",
+    "mimeType": "text/plain",
+    "responsibleUser": "NKellner"
+  }
+}

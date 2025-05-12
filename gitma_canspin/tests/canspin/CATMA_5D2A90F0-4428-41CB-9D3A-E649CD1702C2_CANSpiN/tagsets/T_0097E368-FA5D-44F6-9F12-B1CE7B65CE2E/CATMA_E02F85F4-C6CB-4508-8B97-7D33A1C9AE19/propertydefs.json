@@ -1,0 +1,28 @@
+{
+  "name": "Bewegung-Licht",
+  "parentUuid": "",
+  "systemPropertyDefinitions": {
+    "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": {
+      "name": "catma_markuptimestamp",
+      "possibleValueList": [],
+      "uuid": "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6"
+    },
+    "CATMA_A309D8FB-C5B8-33C9-A1B1-8CF7A5548C6A": {
+      "name": "catma_displaycolor",
+      "possibleValueList": [
+        "-3536117"
+      ],
+      "uuid": "CATMA_A309D8FB-C5B8-33C9-A1B1-8CF7A5548C6A"
+    },
+    "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": {
+      "name": "catma_markupauthor",
+      "possibleValueList": [
+        "marc_lemke"
+      ],
+      "uuid": "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF"
+    }
+  },
+  "tagsetDefinitionUuid": "T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+  "userDefinedPropertyDefinitions": {},
+  "uuid": "CATMA_E02F85F4-C6CB-4508-8B97-7D33A1C9AE19"
+}

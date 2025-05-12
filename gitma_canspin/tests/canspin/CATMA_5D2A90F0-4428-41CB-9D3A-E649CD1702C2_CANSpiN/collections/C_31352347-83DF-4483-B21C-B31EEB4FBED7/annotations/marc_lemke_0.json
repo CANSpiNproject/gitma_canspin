@@ -1,0 +1,1402 @@
+[
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_0F180262-2419-4572-B059-843FEA29B242",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:44:22.418+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 915,
+            "end": 920,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_CD7979C2-C960-4316-8C7F-A526CEB76B3C",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:44:27.344+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 902,
+            "end": 914,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_9C4EC6B2-1371-459E-9DA3-D71129F6DFD1",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_F1E072E2-4137-407C-BD8C-1F17C240EB1E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_F1E072E2-4137-407C-BD8C-1F17C240EB1E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_F1E072E2-4137-407C-BD8C-1F17C240EB1E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:44:31.019+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 921,
+            "end": 924,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_8828C4E8-BA07-47DE-8DF0-FFD120A1E9FA",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_984394C1-B4EB-4D7A-B72B-18789A05067A/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_984394C1-B4EB-4D7A-B72B-18789A05067A/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_984394C1-B4EB-4D7A-B72B-18789A05067A",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:44:37.588+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 925,
+            "end": 931,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_87FBCFB5-1982-460F-8576-0AD2EEDBA4B7",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:44:41.464+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 932,
+            "end": 941,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_F488AD69-94CD-4E5E-82E5-0E0406C42600",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:44:53.408+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1026,
+            "end": 1039,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_D75D55F6-1C15-4154-85F1-5AE52E4715C4",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:45:02.205+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1049,
+            "end": 1062,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_8346A2A7-1B7B-45E7-A9E6-FE108914BD2A",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:45:06.883+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1084,
+            "end": 1099,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_97D23D32-B97F-4599-8D01-8F7DA8E2C4CB",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:45:17.350+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1136,
+            "end": 1142,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_95ABF4FB-08E7-4B09-B661-00D2785FC3A1",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:45:21.315+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1143,
+            "end": 1148,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_EDAC61D5-9B74-4FF3-8583-E7330507B646",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:45:28.257+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1201,
+            "end": 1207,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_A16EB110-AE33-451F-91B7-2B4AC47A319B",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:45:37.246+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1190,
+            "end": 1200,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_BCBD463F-C721-4BEC-8B0B-955A732A4095",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_F1E072E2-4137-407C-BD8C-1F17C240EB1E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_F1E072E2-4137-407C-BD8C-1F17C240EB1E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_F1E072E2-4137-407C-BD8C-1F17C240EB1E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:45:48.647+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1209,
+            "end": 1212,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_8E69C241-7DB9-4DB4-AF26-8F9BACC99FF3",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_45CCB5E8-71E9-4CB3-AD79-0C038D27DFB4/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_45CCB5E8-71E9-4CB3-AD79-0C038D27DFB4/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_45CCB5E8-71E9-4CB3-AD79-0C038D27DFB4",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:46:15.319+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1226,
+            "end": 1235,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_130BB830-BE39-4E24-86E3-A5CE95609C89",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:46:38.436+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1255,
+            "end": 1261,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_80738861-1150-48F8-8116-2015610811D4",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_956FAAB6-910F-4899-B332-A27986AB53F6/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_956FAAB6-910F-4899-B332-A27986AB53F6/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_956FAAB6-910F-4899-B332-A27986AB53F6",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:47:02.412+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1297,
+            "end": 1303,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_1ED189CA-CB2A-46B9-B5F2-58EC2621A4D4",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_9A6CD086-7331-4DB0-BF19-9D6ADBFC6A90/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_9A6CD086-7331-4DB0-BF19-9D6ADBFC6A90/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_9A6CD086-7331-4DB0-BF19-9D6ADBFC6A90",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:47:13.653+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1321,
+            "end": 1324,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_13A36933-76F0-4E06-819F-4F3045DFD016",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_9A6CD086-7331-4DB0-BF19-9D6ADBFC6A90/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_9A6CD086-7331-4DB0-BF19-9D6ADBFC6A90/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_9A6CD086-7331-4DB0-BF19-9D6ADBFC6A90",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:47:16.857+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1325,
+            "end": 1327,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_655947DA-0243-434D-B1F2-9E0864B90177",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:48:09.353+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1341,
+            "end": 1346,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_A60D4160-3925-4373-ACFB-D1B496A95077",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:48:14.259+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1347,
+            "end": 1354,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_5DA9E264-C86F-4539-BA21-39E6A60E1ADE",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:48:17.999+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1332,
+            "end": 1336,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_E6ABD844-D195-4FE0-A312-8829E09ABD2B",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_F1E072E2-4137-407C-BD8C-1F17C240EB1E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_F1E072E2-4137-407C-BD8C-1F17C240EB1E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_F1E072E2-4137-407C-BD8C-1F17C240EB1E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:48:22.108+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1337,
+            "end": 1340,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_B657CFEB-CE7F-439F-8DF9-680CBEF83F06",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_F1E072E2-4137-407C-BD8C-1F17C240EB1E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_F1E072E2-4137-407C-BD8C-1F17C240EB1E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_F1E072E2-4137-407C-BD8C-1F17C240EB1E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:48:38.186+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1387,
+            "end": 1389,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_784667B4-B459-47D5-AAC4-6CE4F16778B2",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_7DEAB89F-5814-4CB8-B15E-6FAC0EA8C807/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_7DEAB89F-5814-4CB8-B15E-6FAC0EA8C807/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_7DEAB89F-5814-4CB8-B15E-6FAC0EA8C807",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:48:52.524+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1407,
+            "end": 1413,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_AD28A66B-C330-447B-A6CC-B904887EF924",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_984394C1-B4EB-4D7A-B72B-18789A05067A/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_984394C1-B4EB-4D7A-B72B-18789A05067A/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_984394C1-B4EB-4D7A-B72B-18789A05067A",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:49:05.392+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1414,
+            "end": 1421,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_7CA6ECE6-ACB7-4FE7-86A8-F2E8DDFCA5F2",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:49:09.435+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1422,
+            "end": 1428,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_556FC5A3-4762-46A9-A560-39F135F3DA86",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:49:15.003+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1444,
+            "end": 1450,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_E82F870B-2720-4DD6-B89F-FAD3FBADD397",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:49:20.658+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1497,
+            "end": 1503,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_1E08483E-8985-477C-98B5-1957F4F3BD6C",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:49:24.411+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1508,
+            "end": 1516,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_79903CEB-8937-435D-A511-3FEAEC09A26D",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_60784FBA-B75E-41A0-894C-0F8794E40961",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:49:45.181+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1545,
+            "end": 1554,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_289CB260-7F7F-4F00-9D31-FACBAC1948E6",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_3D6E0AEE-99B9-4B45-933F-945B2DEAF37E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:49:59.565+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1600,
+            "end": 1608,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_88F7514D-F0B7-4C09-99FA-02B33432D0E4",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_9A6CD086-7331-4DB0-BF19-9D6ADBFC6A90/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_9A6CD086-7331-4DB0-BF19-9D6ADBFC6A90/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_9A6CD086-7331-4DB0-BF19-9D6ADBFC6A90",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:50:06.641+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1618,
+            "end": 1623,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_EE87E0E2-2B6C-4223-B8DD-5ACDB0172C19",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_E02F85F4-C6CB-4508-8B97-7D33A1C9AE19/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_E02F85F4-C6CB-4508-8B97-7D33A1C9AE19/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_E02F85F4-C6CB-4508-8B97-7D33A1C9AE19",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:50:18.982+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1681,
+            "end": 1690,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_AF0AEBB0-839C-4A85-AB22-CA7B1C2F99A1",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_CCCD13F4-C03A-4927-A285-494D4D893044/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_CCCD13F4-C03A-4927-A285-494D4D893044/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_CCCD13F4-C03A-4927-A285-494D4D893044",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:50:26.294+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1670,
+            "end": 1680,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  },
+  {
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "type": "Annotation",
+    "id": "collections/C_31352347-83DF-4483-B21C-B31EEB4FBED7/annotations/CATMA_BC78ADF7-11CC-4FFE-856B-D64ACF0D24E6",
+    "body": {
+      "@context": {
+        "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_18396E02-4101-47DC-B116-CA67192A488E/CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6",
+        "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_18396E02-4101-47DC-B116-CA67192A488E/CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF",
+        "tag": "https://www.catma.de/tag",
+        "tagset": "https://www.catma.de/tagset"
+      },
+      "tagset": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E",
+      "tag": "tagsets/T_0097E368-FA5D-44F6-9F12-B1CE7B65CE2E/CATMA_18396E02-4101-47DC-B116-CA67192A488E",
+      "properties": {
+        "system": {
+          "CATMA_54A5F93F-5333-3F0D-92F7-7BD5930DB9E6": [
+            "2024-09-22T22:50:52.078+0200"
+          ],
+          "CATMA_AB27F1D4-303A-3622-BB2C-72C310D0C1BF": [
+            "marc_lemke"
+          ]
+        },
+        "user": {}
+      },
+      "type": "Dataset"
+    },
+    "target": {
+      "items": [
+        {
+          "source": "D_8DF7D156-948B-49F8-8EF1-D7D79BE89E80",
+          "selector": {
+            "start": 1641,
+            "end": 1648,
+            "type": "TextPositionSelector"
+          }
+        }
+      ],
+      "type": "List"
+    }
+  }
+]
