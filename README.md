@@ -1,4 +1,4 @@
-# gitma_CANSpiN
+# gitma-CANSpiN
 ![version](https://img.shields.io/badge/version-1.6.2-blue)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL_v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 
