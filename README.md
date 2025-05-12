@@ -1,6 +1,7 @@
 # gitma-CANSpiN
 ![version](https://img.shields.io/badge/version-1.6.2-blue)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL_v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15388463.svg)](https://doi.org/10.5281/zenodo.15388463)
 
 The repository is used to adapt [GitMA](https://github.com/forTEXT/gitma) 2.0.1 for the CANSpiN project. The adapted version is available as a Python package here as *gitma_canspin* and can be used in the project pipeline for export, analysis, visualization and the creation of a gold standard of annotations from Catma.
 
