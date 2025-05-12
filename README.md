@@ -91,18 +91,34 @@ Currently, a **Streamlit** app is being added to the package that allows all the
     ```python
     exporter = AnnotationExporter(init_settings=my_exporter_init_settings)
     ```
-    If the exporter has received the correct init values, a list of all loaded annotation collections of the project `CATMA_4AA4ADC0-4C28-54F9-B6A1-5DCEFF34B90B_DH2025_CANSpiN` is displayed in the terminal. In addition, all TSV annotation data of the folders `canspin-deu-19/cs1-tsv`, `canspin-deu-20/cs1-tsv`, `canspin-spa-19/cs1-tsv`, and `canspin-lat-19/cs1-tsv` is loaded. You can check it by executing the line: `exporter.print_tsv_annotations_overview()`. To get the list of the loaded Catma Annotation Collections execute: `exporter.print_projects_annotation_collection_list()`.
+    If the exporter has received the correct init values, a list of all loaded annotation collections of the project `CATMA_4AA4ADC0-4C28-54F9-B6A1-5DCEFF34B90B_DH2025_CANSpiN` is displayed in the terminal. In addition, all TSV annotation data of the folders `canspin-deu-19/cs1-tsv`, `canspin-deu-20/cs1-tsv`, `canspin-spa-19/cs1-tsv`, and `canspin-lat-19/cs1-tsv` is loaded. You can check it by executing the line:
+    ```python
+    exporter.print_tsv_annotations_overview()
+    ```
+    To get the list of the loaded Catma Annotation Collections execute:
+    ```python
+    exporter.print_projects_annotation_collection_list()
+    ```
+    Here you can see the annotation indices, which will are necessary to know for the export. We want to export the collection `Nils -- CS1 V.1.1.0 (Gold:1-1-1)` refering to the document `DEU-19_030`. Its index should be `4`.
 
-All three of the classes described below have a class property `project` in which the loaded Catma project is stored as a `CanspinProject` instance: `exporter.project`.
+All three of the classes described below have a class property `project` in which the loaded Catma project is stored as a `CanspinProject` instance:
+```python
+exporter.project
+```
 
 ### AnnotationExporter
 This class is designed to export CATMA annotations into `.tsv` and TEI-conform `.xml` files. This step is part of the project pipeline: preparing the annotations for usage in training classifiers.
 
 #### Getting started
-- In the processing settings, select the text segment that is to be selected from the document of the annotation collection to be exported: `exporter.processing_settings['text_borders'] = (420, 640)`. The `text_borders` are passed as tuples. You can find the correct values for the individual chapters of a text in the readme file of the corpora. To determine suitable `text_borders` values yourself or to test them before exporting, use the method `exporter.get_text_border_values_by_string_search(annotation_collection_index=0, substrings=('Ein ansehnlicher Theil der beiden Lausitzen', 'an die Wohnstube stoßende Schlafkammer.'))` which can be used to determine the `text_borders` values by delivering text passages of the beginning and the end of the desired text segment. Furthermore you can use `exporter.test_text_borders(text_borders=(420,640), text_snippet_length=30, annotation_collection_index =0)` to test the determined values: It displays text snippets of length `text_snippet_length` from the starting value of `text_borders` and towards the end value of `text_borders` from the annotation collection selected via `annotation_collection_index`. Overall, the step of determining text_borders values is necessary because the texts loaded into CATMA also contain metadata from the TEI header. It is also necessary if only the annotations of a specific chapter of a whole text are to be exported.
-- Start the export pipeline. If multiple annotation collections are loaded, make sure to select the desired one using the `annotation_collection_index` parameter:
+- In the processing settings, select the text segment that is to be selected from the document of the annotation collection to be exported:
+```python
+exporter.processing_settings['text_borders'] = (478, 42466)
+exporter.processing_settings
+```
+The `text_borders` are passed as tuples. To determine suitable `text_borders` values yourself or to test them before exporting, use the method `exporter.get_text_border_values_by_string_search(annotation_collection_index=0, substrings=('Ein ansehnlicher Theil der beiden Lausitzen', 'an die Wohnstube stoßende Schlafkammer.'))`, which can be used to determine the `text_borders` values by delivering text passages of the beginning and the end of the desired text segment. Furthermore you can use `exporter.test_text_borders(text_borders=(420,640), text_snippet_length=30, annotation_collection_index =0)` to test the determined values: It displays text snippets of length `text_snippet_length` from the starting value of `text_borders` and towards the end value of `text_borders` from the annotation collection selected via `annotation_collection_index`. Overall, the step of determining text_borders values is necessary because the texts loaded into CATMA also contain metadata from the TEI header. It is also necessary if only the annotations of a specific chapter of a whole text are to be exported.
+- Start the export pipeline. If multiple annotation collections are loaded, make sure to select the desired one using the `annotation_collection_index` parameter. In our example, we want to export :
     ```python
-    exporter.run(annotation_collection_index=0)
+    exporter.run(annotation_collection_index=4)
     ```
     With this, apart from the `text_borders`, the default settings (stored in exporter.processing_settings) are used and three files are created in the project folder: `basic_token_table.tsv`, `annotated_token_table.tsv` and `annotated_tei.xml`.
     ```
