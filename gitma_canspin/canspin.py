@@ -55,7 +55,7 @@ class CanspinProject:
             init_settings: Union[dict, None] = None):
         
         self.default_init_settings: dict = {
-            'project_name': 'CATMA_5D2A90F0-4428-41CB-9D3A-E649CD1702C2_CANSpiN',
+            'project_name': 'CATMA_4AA4ADC0-4C28-54F9-B6A1-5DCEFF34B90B_DH2025_CANSpiN',
             'selected_annotation_collection': None,
             'load_from_gitlab': False,
             'gitlab_access_token': None
@@ -76,7 +76,7 @@ class CanspinProject:
         """
         try:
             return CatmaProject(
-                project_name=self.init_settings.get('project_name', 'CATMA_5D2A90F0-4428-41CB-9D3A-E649CD1702C2_CANSpiN'),
+                project_name=self.init_settings.get('project_name', 'CATMA_4AA4ADC0-4C28-54F9-B6A1-5DCEFF34B90B_DH2025_CANSpiN'),
                 included_acs=self.init_settings.get('selected_annotation_collection'),
                 load_from_gitlab=self.init_settings.get('load_from_gitlab', False),
                 gitlab_access_token=self.init_settings.get('gitlab_access_token')
