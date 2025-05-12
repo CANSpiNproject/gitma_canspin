@@ -2,160 +2,161 @@
 ![version](https://img.shields.io/badge/version-1.6.2-blue)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL_v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 
-*Read this file in different languages: [English](README.en.md)*
+The repository is used to adapt [GitMA](https://github.com/forTEXT/gitma) 2.0.1 for the CANSpiN project. The adapted version is available as a Python package here as *gitma_canspin* and can be used in the project pipeline for export, analysis, visualization and the creation of a gold standard of annotations from Catma.
 
-Das Repository dient der Anpassung von GitMA 2.0.1 für das CANSpiN-Projekt. Die angepasste Version steht als *gitma_canspin* hier als Python-Paket zur Verfügung und kann entsprechend in der Projekt-Pipeline für den Export, die Analyse, die Visualisierung und die Erstellung eines Goldstandards von Annotationen aus Catma genutzt werden.
+**This package is still a work in progress and is currently not being tested for use in project scenarios other than the CANSpiN project. If you discover problems in your application scenario, please do not hesitate to contact us.**
 
-## Anpassungen in GitMA
-- *canspin*-Modul hinzugefügt mit `CanspinProject`-, `AnnotationExporter`-, `AnnotationAnalyzer` und `AnnotationManipulator`-Klasse
-- *_helper*-Modul hinzugefügt
-- *pytest*-Setup hinzugefügt
-- *streamlit*-App zur Steuerung der Funktionen des *canspin*-Moduls in einer GUI hinzugefügt:
-  - *gui_start*-Modul hinzugefügt
-  - *gui*-Paket mit App-Modulen hinzugefügt
-  - `gui-start`-Skript zum Start der Streamlit-App hinzugefügt
-- `AnnotationCollection`-Klasse im *annotation_collection*-Modul und das *_export_annotations*-Modul angepasst:
-  - `create_basic_token_tsv()` zur Klasse `AnnotationCollection` und im *_export_annotations*-Modul hinzugefügt
-  - `create_annotated_token_tsv()` zur Klasse `AnnotationCollection` und im *_export_annotations*-Modul hinzugefügt
-  - `create_annotated_tei()` zur Klasse `AnnotationCollection` und im *_export_annotations*-Modul hinzugefügt
-  - `get_spacy_df()` im *_export_annotations*-Modul angepasst
-  - `to_stanford_tsv()` in der Klasse `AnnotationCollection` und im *_export_annotations*-Modul angepasst
-- `print_annotation_collections_list()` zur Klasse `CatmaProjekt` hinzugefügt
-- `write_annotation_json_with_ac_object()` im *_write_annotation*-Modul hinzugefügt
-- Dokumentation, Demos, Docker-Template entfernt
+## Customizations in GitMA
+- added *canspin* module with the classes `CanspinProject`, `AnnotationExporter`, `AnnotationAnalyzer` and `AnnotationManipulator`
+- added *_helper* module
+- added *pytest* setup
+- added a *streamlit* app to control the functions of the *canspin* module in a GUI:
+  - added a *gui_start* module
+  - added a *gui* package with app modules
+  - added a `gui-start` script to start the streamlit app
+- adjusted the `AnnotationCollection` class in the *annotation_collection* module and the *_export_annotations* module:
+  - added `create_basic_token_tsv()` to the `AnnotationCollection` class and in the *_export_annotations* module
+  - added `create_annotated_token_tsv()` to the `AnnotationCollection` class and in the *_export_annotations* module
+  - added `create_annotated_tei()` to the `AnnotationCollection` class and in the *_export_annotations* module
+  - adapted `get_spacy_df()` in the *_export_annotations* module
+  - adepted `to_stanford_tsv()` in the `AnnotationCollection` class and in the *_export_annotations* module
+- added `print_annotation_collections_list()` to the `CatmaProjekt` class
+- added `write_annotation_json_with_ac_object()` in the *_write_annotation* module
+- removed documentation, demos and docker template
 
 ## Installation
-### Voraussetzungen
-- mindestens 2 GB freien Festplatten-Speicher
-- Python 3.10 oder [Anaconda/Miniconda mit Python 3.10-Unterstützung](https://docs.anaconda.com/miniconda/system-requirements/)
+### Technical prerequisites
+- at least 2 GB of free hard disk space
+- Python 3.10 or [Anaconda/Miniconda with Python 3.10 support](https://docs.anaconda.com/miniconda/system-requirements/)
 - [Git](https://git-scm.com/downloads)
 
 ### Windows
-- Erzeuge und aktivierte eine virtuelle Umgebung via `conda` mit Python 3.10: `conda create -n name_environment python=3.10` und `conda activate name_environment`.
-- Klone das Repository in einen Projekt-Ordner: `git clone https://cls-gitlab.phil.uni-wuerzburg.de/canspin/gitma-canspin.git`.
-- Wechsel im Terminal in den Repository-Ordner und installiere die benötigten Pakete und das Paket selbst: `pip install -r requirements.txt && pip install -e .`.
-- Falls es Probleme mit dem Paket `cvxopt` gibt, installiere es via `conda` und der Paketresource `conda-forge`:
-  - Füge `conda-forge` als Paketresource in dein `conda` ein: `conda config --add channels conda-forge`.
-  - Setze die Priorität für den `conda-forge`-Channel: `conda config --set channel_priority strict`.
-  - Installiere `cvxopt` via `conda`: `conda install cvxopt==1.3.2`.
-  - Versuche erneut die Installation von `gitma_CANSpiN` wie in Schritt 3 beschrieben.
+- Create and activate a virtual environment via `conda` with Python 3.10: `conda create -n name_environment python=3.10` and `conda activate name_environment`.
+- Clone the repository into a project folder: `git clone https://github.com/CANSpiNproject/gitma_canspin.git`.
+- Change to the repository folder in the terminal and install the necessary packages as well as the packages itself: `pip install -r requirements.txt && pip install -e .`.
+- If there are problems with the `cvxopt` package, install it via `conda` and the package resource `conda-forge`:
+  - Add `conda-forge` as a package resource in your `conda`: `conda config --add channels conda-forge`.
+  - Set the priority for the `conda-forge` channel: `conda config --set channel_priority strict`.
+  - Install `cvxopt` via `conda`: `conda install cvxopt==1.3.2`.
+  - Retry installing `gitma_CANSpiN` as described in step 3.
 
 ### Ubuntu
-- Gehe analog zur Windows-Installation vor. Falls du kein `conda` verwenden möchtest, sondern beispielsweise `venv`, sorge dafür, Python in Version 3.10 zu benutzen.
-- Falls es ohne `conda` zu Problemen mit dem Paket `cvxopt` kommt, fehlen wahrscheinlich Voraussetzungen, C- bzw. C++-Code zu compilen. Stelle sicher, dass die Build Essential-Pakete und das Python-Dev-Paket installiert sind: `sudo apt install python3-dev && sudo apt install build-essential`.
+- Proceed in the same way as for the Windows installation. If you do not want to use `conda`, but `venv`, for example, make sure you use Python version 3.10.
+- If you use a non-`conda` installation and you encounter problems with the `cvxopt` package, you probably lack the prerequisites to compile C or C++ code. Make sure you have the Build Essential packages and the Python-Dev package installed: `sudo apt install python3-dev && sudo apt install build-essential`.
 
 ## Updates
-Gibt es eine neue Version im Online-Repository, lade die Änderungen herunter (`git pull`). Der aktualisierte Stand ist danach sofort im pip-Paket verfügbar. Der Kernel eines bereits zuvor geladenes Jupyter Notebooks, was auf das Paket zugreift, müsste neugestartet werden. Einzig um auch die mit `pip list` angezeigte Versionsnummer zu aktualisieren, ist erneutes Ausführen von `pip install -e .` im Paket-Ordner notwendig.
+If there is a new version in the online repository, download the changes (`git pull`). The updated state is then immediately available in the pip package. The kernel of a previously loaded Jupyter Notebook accessing the package would need to be restarted. Only to update the version number displayed with `pip list` is it necessary to re-execute `pip install -e .` in the package folder.
 
 ## Testing
-Die Unit- und Integration-Tests befinden sich im Moment im Aufbau. Um die Tests auszuführen, starte pytest im Paket-Ordner `gitma-canspin`: `pytest`.
+The unit and integration tests are currently being developed. To run the tests, start pytest in the package folder `gitma-canspin`: `pytest`.
 
 ## Getting started
-Neben den folgenden Step-by-Step-Anweisungen und -Erläuterungen findet ihr im Repo `CANSpiN-scripts` im Ordner `Templates/gitma_canspin` bereits fertige Skripte und Jupyter Notebooks für verschiedene Aufgaben. Diese Dateien sind dafür vorgesehen, in den Projekt-Ordner kopiert und dort ausgeführt zu werden. Es müssen dafür zuvor notwendige Einstellungen in den Vorlagen vorgenommen werden, bevor sie funktionieren (unter anderem die Eingabe eines usergebundenen persönlichen Tokens für den Zugriff auf das CATMA-Backend und Dateinamen für den In- und Export).
+The package *gitma_canspin* is designed to handle multi-class annotations, i.e. every token of a text can only be assigned to one class. Based on that, you can use *gitma_canspin* for exporting [Catma](https://catma.de/) annotation data into `.tsv` and TEI-conform `.xml` files with inline annotations, for computing statistical data about annotations, creating visualizations, calculating inter-annotator agreements and creating goldstandard annotation collections.
 
-Work in Progress: Momentan wird eine **Streamlit**-App dem Paket hinzugefügt, mit der alle Funktionen des *canspin*-Moduls in einer GUI benutzt werden können. Ist die virtuelle Umgebung aktiviert, kann die App von jedem Ordner aus im Terminal gestartet werden: `gui-start`.
+Currently, a **Streamlit** app is being added to the package that allows all the features of the *canspin* module to be used in a GUI. Once the virtual environment is activated, the app can be started from every folder in the terminal: `gui-start`. Independently of the reference to the Streamlit app, step-by-step instructions for creating your own Jupyter Notebooks and scripts now follow. Three classes are currently provided for working with the package: [AnnotationExporter](#annotationexporter), [AnnotationAnalyzer](#annotationanalyzer) and [AnnotationManipulator](#annotationmanipulator). All three depend on a Catma project being loaded first. This is demonstrated below using the loading of an exporter.
 
-Unabhängig des Hinweises auf die vorbereiteten Dateien im Repo `CANSpiN-scripts` und des Hinweises auf die Streamlit-App folgen nun Step-by-Step-Anweisungen zum Anlegen eigener Notebooks und Skripte. Zur Arbeit mit dem Paket sind momentan drei Klassen vorgesehen: [AnnotationExporter](#annotationexporter), [AnnotationAnalyzer](#annotationanalyzer) und [AnnotationManipulator](#annotationmanipulator). Alle drei sind darauf angewiesen, zunächst ein Catma-Projekt zu laden. Anhand des Ladens eines Exporters wird das im Folgenden demonstriert.
-
-- Lege im Projekt-Ordner ein neues Python-Skript oder ein Jupyter Notebook an. So sollte die Ordnerstruktur aussehen:
+- To code along, first of all place the folders of the [DH2025 repository](https://github.com/CANSpiNproject/dh2025.git) inside your project folder. Then create a new Python script or a Jupyter Notebook in the project folder. The folder structure should look like this:
     ```
-    <Projekt-Ordner>
+    <project folder>
+      <CATMA_4AA4ADC0-4C28-54F9-B6A1-5DCEFF34B90B_DH2025_CANSpiN>
+      <canspin-deu-19>
+      <canspin-deu-20>
+      <canspin-spa-19>
+      <canspin-lat-19>
       <gitma-canspin>
-      mein_skript.py
-      mein_notebook.ipynb
+      <results>
+      my_script.py
+      my_notebook.ipynb
     ```
-- In der neuen Python-Datei: Importiere die `AnnotationExporter`-Klasse vom *canspin*-Modul des *gitma_canspin*-Pakets:
+- In the new Python file: Import the `AnnotationExporter` class from *canspin* module of *gitma_canspin*:
     ```python
     from gitma_canspin.canspin import AnnotationExporter
     ```
-- Definiere die Initialisierungseinstellungen des Exporters, hier für das Catma-Projekt mit den deutschen CANSpiN-Texten:
+- Define the initialization settings for the exporter, here for the Catma project DH2025 CANSpiN data:
     ```python
     my_exporter_init_settings = {
-      'project_name': 'CATMA_5D2A90F0-4428-41CB-9D3A-E649CD1702C2_CANSpiN',
+      'project_name': 'CATMA_4AA4ADC0-4C28-54F9-B6A1-5DCEFF34B90B_DH2025_CANSpiN',
       'selected_annotation_collection': None,
-      'load_from_gitlab': True,
-      'gitlab_access_token': '<dein_access_token>'
+      'load_from_gitlab': False,
+      'gitlab_access_token': None
     }
     ```
-  - `project_name` (str, default: `'CATMA_5D2A90F0-4428-41CB-9D3A-E649CD1702C2_CANSpiN'`) ist in Catma definiert, entspricht dem Ordner-Namen des Projekts, der mit Hilfe einer Funktion im Anfangsbereich der oben genannten Jupyter Notebook-Templates im `CANSpiN-scripts`-Repo oder über den Login in das Catma-Backend ([https://git.catma.de](https://git.catma.de)) zu erfahren ist. Der Default-Wert ist der Ordner-Name des Catma-Projekts für die deutschen Texte im CANSpiN-Projekt.
-  - `selected_annotation_collection` (str oder list\[str\], default: `None`) ermöglicht es gefiltert nach dem Namen von Annotation Collections gezielt nur eine Auswahl an Annotation Collections in den Exporter zu laden. Die gelieferten Strings müssen exakt den Namen der Annotation Collections entsprechen. Dies ist nur ein optionaler Schritt: Dem Befehl zum Ausführen des Exportierens (`exporter.run()`) wird als Argument ein Index-Wert übergeben, mit dem die zu exportierende Annotation Collection aus den im Exporter geladenen Collections ausgewählt wird. Mit Hilfe von `exporter.print_projects_annotation_collection_list()` kann man die Liste aller geladenen Collections anschauen und die entsprechenden Index-Werte erfahren. Durch das Filtern via den `filter_for_text`-Parameter kann hier ebenfalls die womöglich lange Liste an Annotation Collections auf die im Printout reduziert werden, die sich auf einen bestimmten Text beziehen. Zuvor kann via das `selected_annotation_collection`-Setting bereits beim Initialisieren des Exporters die Liste an Annotation Collections im Projekt initial für eine bessere Übersicht reduziert werden.
-  - `load_from_gitlab` (bool, default: `False`) gibt an, ob die Daten vom Catma-Backend heruntergeladen oder lokal aus einem bereits heruntergeladenen Ordner (der sich dann im Projekt-Ordner befinden würde) verwendet werden soll. Standardmäßig wird nach einem lokalen Ordner im Projekt-Ordner gesucht. Wenn die Daten heruntergeladen werden sollen, wird der `gitlab_access_token` benötigt, um Zugriff auf die Projektdaten bei Catma zu bekommen, und der entsprechende Ordner mit den Daten im Projekt-Ordner angelegt.
+  - `project_name` (str, default: `'CATMA_4AA4ADC0-4C28-54F9-B6A1-5DCEFF34B90B_DH2025_CANSpiN'`) is defined in Catma and corresponds to the folder name of a project, which can be obtained by logging into the Catma backend ([https://git.catma.de](https://git.catma.de)), if you have a Catma account. The default value is the folder name of the Catma project for the DH2025 data of the CANSpiN project.
+  - `selected_annotation_collection` (str or list\[str\], default: `None`) allows you to filter by the name of annotation collections to load only a selection of annotation collections into the exporter. The delivered strings must match exactly the names of the annotation collections. This is only an optional step: The command for executing the export (`exporter.run()`) uses an index value as an argument, which is needed to select the annotation collection to be exported from the collections loaded in the exporter. With the help of `exporter.print_projects_annotation_collection_list()`, you can view the list of all loaded collections and find out the corresponding index values. By filtering via the `filter_for_text` parameter, the possibly long list of annotation collections can also be reduced to those in the printout that refer to a specific text. Previously, the list of annotation collections in the project can already be reduced for a better overview when initializing the exporter via the `selected_annotation_collection` setting.
+  - `load_from_gitlab` (bool, default: `False`) indicates whether the data should be downloaded from the Catma backend or used locally from an already downloaded folder (which would then be located in the project folder). By default, a local folder in the project folder is being searched for. If the data is to be downloaded, the `gitlab_access_token` is required to get access to the project data at Catma, and the corresponding folder with the data is created in the project folder.
 
-      **ACHTUNG**: Falls die Daten schon einmal heruntergeladen worden sind, der Daten-Ordner im Projekt-Ordner also bereits existiert, führt erneutes Herunterladen zu einem Fehler: Der alte Ordner wird von *gitma* nicht überschrieben, sondern muss, wenn gewollt, zunächst händisch gelöscht werden. Ein vorhandenes lokales Projekt kann allerdings auch mit Hilfe der Methode `exporter.update_project()` aktualisiert werden ohne es löschen zu müssen: Lade den Exporter entsprechend mit `load_from_gitlab = False` und führe nach dem Laden die Update-Methode aus.
-  - `gitlab_access_token` (str, default: `None`) ist der Schlüssel, mit dem die Daten vom Catma-Backend heruntergeladen werden können. Um einen Token von Catma zu bekommen, log dich in Catma ein, klicke rechts oben auf das Avatar-Symbol, wähle *Get Access Token*, folge den Hinweisen und füge den Token-String hier in die init-Settings ein.
-- Erzeuge eine `AnnotationExporter`-Instanz mit den eben definierten Initialisierungseinstellungen:
+      **ATTENTION**: If the data has already been downloaded, i.e. the data folder already exists in the project folder, downloading again will raise an error: The old folder will not be overwritten by *gitma*, but must first be deleted manually if desired. An existing local project can, however, also be updated without deleting the existing one using the method `exporter.update_project()`: Load the exporter accordingly with `load_from_gitlab = False` and then run the update method after loading.
+  - `gitlab_access_token` (str, default: `None`) is the key that allows you to download data from the Catma backend. To get a token from Catma, login into Catma, click on the avatar icon in the upper right corner, select *Get Access Token*, follow the instructions and insert the token string into the init settings here.
+- Create an `AnnotationExporter` instance with the initialization settings we just defined:
     ```python
     exporter = AnnotationExporter(init_settings=my_exporter_init_settings)
     ```
-    Wenn der Exporter korrekte Init-Werte bekommen hat und der Download des Projekts funktioniert hat, wird im Terminal eine Liste aller geladenen Annotation Collections angezeigt und die Ordnerstruktur sieht nun so aus:
-    ```
-    <Projekt-Ordner>
-      <CATMA_5D2A90F0-4428-41CB-9D3A-E649CD1702C2_CANSpiN>
-      <gitma-canspin>
-      mein_skript.py
-      mein_notebook.ipynb
-    ```
+    If the exporter has received the correct init values, a list of all loaded annotation collections of the project `CATMA_4AA4ADC0-4C28-54F9-B6A1-5DCEFF34B90B_DH2025_CANSpiN` is displayed in the terminal. In addition, all TSV annotation data of the folders `canspin-deu-19/cs1-tsv`, `canspin-deu-20/cs1-tsv`, `canspin-spa-19/cs1-tsv`, and `canspin-lat-19/cs1-tsv` is loaded. You can check it by executing the line: `exporter.print_tsv_annotations_overview()`. To get the list of the loaded Catma Annotation Collections execute: `exporter.print_projects_annotation_collection_list()`.
 
-Alle drei der im Folgenden genannten Klassen besitzen eine Klassenvariable `project`, in der das geladene Catma-Projekt als `CanspinProject`-Instanz gespeichert ist: `exporter.project`.
+All three of the classes described below have a class property `project` in which the loaded Catma project is stored as a `CanspinProject` instance: `exporter.project`.
 
 ### AnnotationExporter
-Die Klasse dient dem Export von CATMA-Annotationen in `.tsv`- und TEI-konforme `.xml`-Dateien. Dieser Schritt ist Teil der Projekt-Pipeline: die Vorbereitung der Annotationen zur Verwendung zum Training von Classifiern mittels NTEE.
+This class is designed to export CATMA annotations into `.tsv` and TEI-conform `.xml` files. This step is part of the project pipeline: preparing the annotations for usage in training classifiers.
 
 #### Getting started
-- Stelle in den Processing-Settings den Textausschnitt ein, der vom Dokument der zu exportierenden Annotation Collection ausgewählt werden soll: `exporter.processing_settings['text_borders'] = (420, 640)`. Die `text_borders` werden als Tupel übergeben. Du findest die für die einzelnen Kapitel eines Textes korrekten Werte in der Readme-Datei der Korpora. Um geeignete `text_borders`-Werte selbst zu ermitteln, benutze die Methode `exporter.get_text_border_values_by_string_search(annotation_collection_index=0, substrings=('Ein ansehnlicher Theil der beiden Lausitzen', 'an die Wohnstube stoßende Schlafkammer.'))`, um anhand von Textstellen am Beginn und Ende des gewünschten Textausschnittes die Werte ermitteln zu lassen. Um vor dem Export ermittelte Werte zu testen, verwende die Methode `exporter.test_text_borders(text_borders=(420,640), text_snippet_length=30, annotation_collection_index=0)`: Sie zeigt von der via `annotation_collection_index` gewählten Annotation Collection Textauschnitte der Länge `text_snippet_length` vom Anfangswert von `text_borders` ausgehend und zum Endwert von `text_borders` hingehend an. Da in den in CATMA geladenen Texten auch Metadaten des TEI-Headers sich befinden, ist dieser Schritt der `text_borders`-Ermittlung notwendig, ebenso, wenn nur die Annotationen eines speziellen Kapitels eines ganzen Textes exportiert werden sollen.
-- Starte die Export-Pipeline. Achte dabei darauf, dass du, falls mehrere Annotation Collections geladen sind, du die gewünschte mit Hilfe des Parameters `annotation_collection_index` auswählst:
+- In the processing settings, select the text segment that is to be selected from the document of the annotation collection to be exported: `exporter.processing_settings['text_borders'] = (420, 640)`. The `text_borders` are passed as tuples. You can find the correct values for the individual chapters of a text in the readme file of the corpora. To determine suitable `text_borders` values yourself or to test them before exporting, use the method `exporter.get_text_border_values_by_string_search(annotation_collection_index=0, substrings=('Ein ansehnlicher Theil der beiden Lausitzen', 'an die Wohnstube stoßende Schlafkammer.'))` which can be used to determine the `text_borders` values by delivering text passages of the beginning and the end of the desired text segment. Furthermore you can use `exporter.test_text_borders(text_borders=(420,640), text_snippet_length=30, annotation_collection_index =0)` to test the determined values: It displays text snippets of length `text_snippet_length` from the starting value of `text_borders` and towards the end value of `text_borders` from the annotation collection selected via `annotation_collection_index`. Overall, the step of determining text_borders values is necessary because the texts loaded into CATMA also contain metadata from the TEI header. It is also necessary if only the annotations of a specific chapter of a whole text are to be exported.
+- Start the export pipeline. If multiple annotation collections are loaded, make sure to select the desired one using the `annotation_collection_index` parameter:
     ```python
     exporter.run(annotation_collection_index=0)
     ```
-    Damit werden abgesehen von den `text_borders` die Standardeinstellungen (gespeichert in exporter.processing_settings) verwendet und drei Dateien im Projekt-Ordner erzeugt: `basic_token_table.tsv`, `annotated_token_table.tsv` und `annotated_tei.xml`.
+    With this, apart from the `text_borders`, the default settings (stored in exporter.processing_settings) are used and three files are created in the project folder: `basic_token_table.tsv`, `annotated_token_table.tsv` and `annotated_tei.xml`.
     ```
-    <Projekt-Ordner>
-      <CATMA_5D2A90F0-4428-41CB-9D3A-E649CD1702C2_CANSpiN>
+    <project folder>
+      <CATMA_4AA4ADC0-4C28-54F9-B6A1-5DCEFF34B90B_DH2025_CANSpiN>
+      <canspin-deu-19>
+      <canspin-deu-20>
+      <canspin-spa-19>
+      <canspin-lat-19>
       <gitma-canspin>
+      <results>
       annotated_tei.xml
       annotated_token_table.tsv
       basic_token_table.tsv
-      mein_skript.py
-      mein_notebook.ipynb
+      my_script.py
+      my_notebook.ipynb
     ```
 
-#### Alle Einstellungsmöglichkeiten
+#### All configuration options
 - `exporter.processing_settings`:
-  - `spacy_model_lang` (str, default: `'German'`) ist die Sprache des spacy-Sprachmodells, das verwendet wird, um den Text der ausgewählten Annotation Collection zu tokenisieren. Die Standard-Sprache ist `'German'` und offensichtlich entsprechend für deutsche Texte geeignet. Spacy-Sprachmodelle werden als pip-Pakete gehandhabt: Sollte das gewählte Modell noch nicht lokal installiert sein, wird es automatisch heruntergeladen. Wählt für spanische Texte die Einstellung `'Spanish'`.
-  - `nlp_max_text_len` (int, default: `2000000`) gibt an, wie lang ein Text maximal sein darf, den spacy tokenisiert.
-  - `text_borders` (tuple[int, int], default: `None`) erlaubt es, einen Textausschnitt des zur Annotation Collection gehörigen Textes zur Verarbeitung auszuwählen. Der korrekte Wert, um beispielsweise Kapitel 1 von DEU030 (Gustav Freytag: *Die verlorene Handschrift*) auszuwählen, wäre `(478, 42466)`. Um die Werte für einen gewünschten Textabschnitt zu ermittelt, kann die Methode `exporter.get_text_border_values_by_string_search(annotation_collection_index=0, substrings=('Ein ansehnlicher Theil der beiden Lausitzen', 'an die Wohnstube stoßende Schlafkammer.'))` verwendet werden, um anhand von Textstellen am Beginn und Ende des gewünschten Textausschnittes die Werte ermitteln zu lassen. Mit `exporter.test_text_borders(text_borders (tuple[int, int]), text_snippet_length (int), annotation_collection_index (int))` kann der Textabschnitt für einen bestimmten `text_borders`-Bereich ausgegeben werden, wobei `text_snippet_length` die Anzahl der gezeigten Zeichen an den Grenzen und `annotation_collection_index` den Index der auszuwählenden Annotation Collection angibt.
-  - `insert_paragraphs` (bool, default: `True`) legt fest, ob beim Erzeugen von TEI Absätze (`<p></p>`) angelegt werden sollen.
-  - `paragraph_recognition_text_class` (str, default: `'eltec-deu'`) bestimmt die Bedingungen, nach denen beim Erzeugen von TEI die einzelnen Token geprüft werden, um zu entscheiden, wo ein neuer Absatz beginnt. Aktuell gibt es folgende Klassen und daran gebundene Codierungen von Absatzwechseln im plain text:
-    - `eltec-deu`: Zeilenumbrüche ohne nachfolgendes Leerzeichen (oder mit nur einem Leerzeichen zwischen Satzzeichen oder ein paar mehr) markieren das Ende eines Absatzes, während Zeilenumbrüche mit 15 Leerzeichen innerhalb eines Absatzes als Zeilenumbrüche gelten.
-  - `use_all_text_selection_segments` (bool, default: `True`) stellt den Verarbeitungsmodus für Textauswahl-Segmente ein. Es gibt zwei Verarbeitungsmodi: Berücksichtige alle Textauswahl-Segmente einer Annotation für den Export (`True`: wird für kurze, diskontinuierliche Annotationen verwendet) oder berücksichtige nur den Start- und Endpunkt einer Annotation und behandle dies wie ein einziges Textauswahl-Segment, auch wenn mehrere Segmente in den Daten vorhanden sind (`False`: wird für längere, zusammenhängende Annotationen verwendet). Diese Modus-Unterscheidung ist für die Verarbeitung längerer Annotationen nötig, da CATMA längere zusammenhängende Annotationen intern in mehrere Textauswahl-Segmente unterteilt und diese Unterteilung nicht in die exportierten Daten übertragen werden soll.
+  - `spacy_model_lang` (str, default: `'German'`) is the language of the spacy language model used to tokenize the text of the selected annotation collection. The default language is `'German'` and is obviously suitable for German texts. Spacy language models are handled as pip packages: if the selected model is not yet installed locally, it will be downloaded automatically. Select `'Spanish'` for Spanish texts.
+  - `nlp_max_text_len` (int, default: `2000000`) indicates the maximum length of a text that spacy tokenizes.
+  - `text_borders` (tuple[int, int], default: `None`) allows you to select a text snippet from the text belonging to the annotation collection for processing. For example, the correct value for selecting chapter 1 of DEU030 (Gustav Freytag: *Die verlorene Handschrift*) would be `(478, 42466)`. To determine the values for a desired text segment, the method `exporter.get_text_border_values_by_string_search(annotation_collection_index=0, substrings=('Ein ansehnlicher Theil der beiden Lausitzen', 'an die Wohnstube stoßende Schlafkammer.'))` can be used. Furthermore there is a method `exporter.test_text_borders(text_borders (tuple[int, int]), text_snippet_length (int), annotation_collection_index (int))` returns the text snippet for a given `text_borders` area, where `text_snippet_length` indicates the number of characters shown at the borders and `annotation_collection_index` indicates the index of the annotation collection to select.
+  - `insert_paragraphs` (bool, default: `True`) determines whether paragraphs (`<p></p>`) should be created when generating TEI.
+  - `paragraph_recognition_text_class` (str, default: `'eltec-deu'`) determines the conditions by which the individual tokens are checked when creating TEI to decide where a new paragraph begins. Currently, there are the following classes and associated encodings of paragraph breaks in plain text:
+    - `eltec-deu`: line breaks without a following space (or with only one space between punctuation marks or a few more) mark the end of a paragraph, while line breaks with 15 spaces within a paragraph are considered line breaks.
+  - `use_all_text_selection_segments` (bool, default: `True`) sets the processing mode for text selection segments. There are two processing modes: consider all text selection segments of an annotation for export (`True`: used for short, discontinuous annotations) or consider only the start and end points of an annotation and treat this as a single text selection segment, even if there are several segments in the data (`False`: used for longer, contiguous annotations). This mode distinction is necessary for processing longer annotations, since CATMA divides longer contiguous annotations internally into several text selection segments and this division should not be transferred to the exported data.
 - `exporter.steps`:
   - `create_basic_token_tsv`:
-    - `activated` (bool, default: `True`): Aktiviere die Erzeugung einer basalen Token-Datei ohne Annotationen.
-    - `output_tsv_file_name` (str, default: `'basic_token_table'`): Name der im Projekt-Ordner erzeugten Datei ohne Endung.
+    - `activated` (bool, default: `True`): Activate the generation of a basal token file without annotations.
+    - `output_tsv_file_name` (str, default: `'basic_token_table'`): Name of the file created in the project folder without the extension.
   - `create_annotated_token_tsv`:
-    - `activated` (bool, default: `True`): Aktiviere die Erzeugung einer annotierten Token-Datei.
-    - `input_tsv_file_name` (str, default: `'basic_token_table'`): Name der im Projekt-Ordner benötigten basalen Token-Datei ohne Annotationen.
-    - `output_tsv_file_name` (str, default: `'annotated_token_table'`): Name der im Projekt-Ordner erzeugten Datei ohne Endung.
+    - `activated` (bool, default: `True`): Activate the creation of an annotated token file.
+    - `input_tsv_file_name` (str, default: `'basic_token_table'`): Name of the basal token file without annotations required in the project folder.
+    - `output_tsv_file_name` (str, default: `'annotated_token_table'`): Name of the file created in the project folder without the extension.
   - `create_annotated_tei`:
-    - `activated` (bool, default: `True`): Aktiviere die Erzeugung einer annotierten XML-TEI-Datei.
-    - `input_tsv_file_name` (str, default: `'annotated_token_table'`): Name der im Projekt-Ordner benötigten annotierten Token-Datei.
-    - `output_tsv_file_name` (str, default: `'annotated_tei'`): Name der im Projekt-Ordner erzeugten Datei ohne Endung.
+    - `activated` (bool, default: `True`): Activate the generation of an annotated XML TEI file.
+    - `input_tsv_file_name` (str, default: `'annotated_token_table'`): Name of the annotated token file required in the project folder.
+    - `output_tsv_file_name` (str, default: `'annotated_tei'`): Name of the file created in the project folder without the extension.
 
 ### AnnotationAnalyzer
-Die Klasse dient dem Ermitteln von Statistiken aus und dem Erzeugen von Visualisierungen von TSV-Annotationsdaten und CATMA-Annotationen. Aktuell können Kreisdiagramme zur Mengendarstellung von Annotationsklassen-Instanzen erzeugt werden (`analyzer.render_overview_pie_chart()`) und Balkendiagramme zur Verteilungsdarstellung (`analyzer.render_progression_bar_chart()`). Eine Methode zur Ermittlung eines Inter-Annotator-Agreements anhand der Gamma-Metrik ausgehend von zwei oder mehreren Annotation Collections ist ebenfalls implementiert (`analyzer.get_iaa()`). Zudem können verschiedene statistische Kennwerte über geladene TSV-Annotationsdateien ermittelt werden (`analyzer.get_corpus_annotation_statistics()`). Für alle Methoden mit Ausnahme von `get_iaa()` ist es notwendig, dass die Korpus-Repositories sich im Projekt-Ordner befinden, da die TSV-Annotationsdaten mit der Initialisierung einer `AnnotationAnalyzer`-Instanz aus den Korpus-Repositorien geladen werden.
+The class is used to determine statistics from and generate visualizations of TSV and CATMA annotations. Currently, pie charts can be generated to show the quantity of annotation class instances (`analyzer.render_overview_pie_chart()`) and bar charts to show the distribution (`analyzer.render_progression_bar_chart()`). A method for determining an inter-annotator agreement based on the gamma metric using two or more annotation collections is also implemented (`analyzer.get_iaa()`). In addition, various statistical values can be determined using loaded annotation tsv files (`analyzer.get_corpus_annotation_statistics()`). All methods except `get_iaa()` require the corpus repositories to be located in the project folder, as the TSV data in it is loaded from these repositories on initialization of the `AnnotationAnalyzer` instance.
 
 #### Getting started
 tba
 
-#### Weitere Einstellungsmöglichkeiten
+#### All configuration options
 tba
 
 ### AnnotationManipulator
-Die Klasse dient dem Verändern oder Neuanlegen von CATMA-Annotationen. Eine Methode zur Erzeugung eines Goldstandards für die Annotation eines Dokuments ausgehend von vorhandenen Annotation Collections ist implementiert (`manipulator.create_gold_standard_ac()`), im Moment jedoch ausschließlich in einem strikten Modus: Annotationen müssen in Selektion und Klassifizierung exakt übereinstimmen, um in die Goldstandard-Collection übernommen zu werden.
+The class is used to modify or create CATMA annotations. A method for creating a gold standard for the annotation of a document based on existing annotation collections is implemented (`manipulator.create_gold_standard_ac()`), but at the moment only in a strict mode: Annotations must exactly match in selection and classification in order to be included in the gold standard collection.
 
 #### Getting started
 tba
 
-#### Weitere Einstellungsmöglichkeiten
+#### All configuration options
 tba
-
