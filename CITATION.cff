@@ -1,0 +1,51 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: gitma-CANSpiN
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Marc
+    family-names: Lemke
+    affiliation: University of Rostock
+    orcid: 'https://orcid.org/0009-0004-8065-8191'
+  - given-names: Nils
+    family-names: Kellner
+    affiliation: University of Rostock
+    orcid: 'https://orcid.org/0009-0002-3966-5635'
+  - given-names: Ulrike
+    family-names: Henny-Krahmer
+    affiliation: University of Rostock
+    orcid: 'https://orcid.org/0000-0003-2852-065X'
+  - given-names: Julián C.
+    family-names: Spinelli
+    affiliation: University of Buenos Aires
+    orcid: 'https://orcid.org/0009-0003-0895-815X'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.15388463
+repository-code: 'https://github.com/CANSpiNproject/gitma-canspin'
+url: 'https://www.canspin.uni-rostock.de/en'
+abstract: >-
+  The Python package gitma-CANSpiN is based on GitMA 2.0.1
+  (https://github.com/forTEXT/gitma) and is adapted for the
+  needs of the CANSpiN project. It can be used for export,
+  analysis, visualization and the creation of a gold
+  standard of annotation data in Catma
+  (https://www.catma.de). This package is still a work in
+  progress and is currently not being tested for use in
+  project scenarios other than the CANSpiN project.
+keywords:
+  - CANSpiN
+  - SPP 2207
+  - Digital Humanities
+  - Computational Literary Studies
+  - CATMA
+  - Annotation
+license: GPL-3.0
+commit: dfa03694888ccc987d6a0e234aab855d5ae4e259
+version: 1.6.2
+date-released: '2025-05-12'
