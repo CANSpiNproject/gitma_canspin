@@ -112,11 +112,11 @@ This class is designed to export CATMA annotations into `.tsv` and TEI-conform `
 
 #### Getting started
 - In the processing settings, select the text segment that is to be selected from the document of the annotation collection to be exported:
-```python
-exporter.processing_settings['text_borders'] = (478, 42466)
-exporter.processing_settings
-```
-The `text_borders` are passed as tuples. To determine suitable `text_borders` values yourself or to test them before exporting, use the method `exporter.get_text_border_values_by_string_search(annotation_collection_index=0, substrings=('Ein ansehnlicher Theil der beiden Lausitzen', 'an die Wohnstube stoßende Schlafkammer.'))`, which can be used to determine the `text_borders` values by delivering text passages of the beginning and the end of the desired text segment. Furthermore you can use `exporter.test_text_borders(text_borders=(420,640), text_snippet_length=30, annotation_collection_index =0)` to test the determined values: It displays text snippets of length `text_snippet_length` from the starting value of `text_borders` and towards the end value of `text_borders` from the annotation collection selected via `annotation_collection_index`. Overall, the step of determining text_borders values is necessary because the texts loaded into CATMA also contain metadata from the TEI header. It is also necessary if only the annotations of a specific chapter of a whole text are to be exported.
+    ```python
+    exporter.processing_settings['text_borders'] = (478, 42466)
+    exporter.processing_settings
+    ```
+    The `text_borders` are passed as tuples. To determine suitable `text_borders` values yourself or to test them before exporting, use the method `exporter.get_text_border_values_by_string_search(annotation_collection_index=0, substrings=('Ein ansehnlicher Theil der beiden Lausitzen', 'an die Wohnstube stoßende Schlafkammer.'))`, which can be used to determine the `text_borders` values by delivering text passages of the beginning and the end of the desired text segment. Furthermore you can use `exporter.test_text_borders(text_borders=(420,640), text_snippet_length=30, annotation_collection_index =0)` to test the determined values: It displays text snippets of length `text_snippet_length` from the starting value of `text_borders` and towards the end value of `text_borders` from the annotation collection selected via `annotation_collection_index`. Overall, the step of determining text_borders values is necessary because the texts loaded into CATMA also contain metadata from the TEI header. It is also necessary if only the annotations of a specific chapter of a whole text are to be exported.
 - Start the export pipeline. If multiple annotation collections are loaded, make sure to select the desired one using the `annotation_collection_index` parameter. In our example, we want to export :
     ```python
     exporter.run(annotation_collection_index=4)
