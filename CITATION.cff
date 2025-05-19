@@ -26,7 +26,7 @@ authors:
     orcid: 'https://orcid.org/0009-0003-0895-815X'
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.15388463
+    value: 10.5281/zenodo.15388462
 repository-code: 'https://github.com/CANSpiNproject/gitma-canspin'
 url: 'https://www.canspin.uni-rostock.de/en'
 abstract: >-
@@ -46,6 +46,6 @@ keywords:
   - CATMA
   - Annotation
 license: GPL-3.0
-commit: dfa03694888ccc987d6a0e234aab855d5ae4e259
-version: 1.6.2
-date-released: '2025-05-12'
+commit: d37a0d51738d1a80be422d5d6bcae0b80bc22470
+version: 1.6.3
+date-released: '2025-05-19'
