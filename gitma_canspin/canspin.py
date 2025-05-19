@@ -817,12 +817,12 @@ class AnnotationAnalyzer(CanspinProject):
             export_filename: str = 'overview_pie_chart_export') -> None:
         """Method for rendering a plotly pie chart as html, refering to the whole data as basic quantity given via the input_tsv parameter.
         Uses the plotly.express.sunburst method and data derived pandas dataframes or tsv files following the CANSpiN annotation file schema.
-        Saves the output html in the project_folder/images folder and shows it with plotly's default renderer settings.
+        Saves the output html in the project_folder/images folder or a self defined folder and shows it with plotly's default renderer settings.
 
         Args:
             input_data (Union[pd.DataFrame, str]): Designed to take a pandas dataframe from the CanspinProject's self.tsv_annotations dict or one or more tsv files.
             render_overview_pie_chart_settings (Union[dict, None], optional): Delivers custom setting for the category and class system used in the visualization. Defaults to default_render_overview_pie_chart_settings.
-            export_filename(str): Name of output file with pie chart, which is saved in the project_folder/images folder. Defaults to 'overview_pie_chart_export'.
+            export_filename(str): Name of output file with pie chart, which is saved in the project_folder/images folder, if no file extension is provided. If a file extension is provided, the export_filename input is taken as a filepath and the chart will be saved there. Defaults to 'overview_pie_chart_export'.
         """           
         render_settings: dict = self.default_render_overview_pie_chart_settings if not render_overview_pie_chart_settings else render_overview_pie_chart_settings
         tsv_data_df: pd.DataFrame = input_data if isinstance(input_data, pd.DataFrame) else self._load_tsv_files(tsv_filepath_list=input_data, render_settings=render_settings)
@@ -879,10 +879,15 @@ class AnnotationAnalyzer(CanspinProject):
         )
 
         html_str: str = fig.to_html()
-        html_filepath_str: str = os.path.join(abs_local_save_path, 'images', f'{export_filename}.html')
+        html_filepath_str: str = os.path.join(abs_local_save_path, 'images', f'{export_filename}.html') \
+                                 if '.html' not in export_filename \
+                                 else export_filename
 
         if (os.path.isfile(html_filepath_str)):
             logger.info(f'HTML file {html_filepath_str} already exists and will be overwritten.')
+
+        if (os.path.dirname(html_filepath_str)) and not (os.path.isdir(os.path.dirname(html_filepath_str))):
+            makedir_if_necessary(os.path.dirname(html_filepath_str))
 
         with open(html_filepath_str, 'w') as file:
             file.write(html_str)
@@ -898,12 +903,12 @@ class AnnotationAnalyzer(CanspinProject):
             export_filename: Union[str, None] = None) -> None:
         """Method for rendering plotly progression bar, each bar displaying the amount of token per class inside a defined textual window, refering to the whole data as basic quantity given via the input_tsv parameter.
         Uses the plotly.express.bar method and data derived pandas dataframes or tsv files following the CANSpiN annotation file schema.
-        Saves the output in the project_folder/images folder or shows it with plotly's default renderer settings.
+        Saves the output in the project_folder/images folder, in a self defined folder or shows it with plotly's default renderer settings.
 
         Args:
             input_data: Union[pd.DataFrame, List[str]]: Designed to take a pandas dataframe from the CanspinProject's self.tsv_annotations dict or one or more tsv files.
             render_progression_bar_chart_settings(Union[dict, None], optional): Delivers custom settings for data visualization and output. Defaults to self.default_render_progression_bar_chart_settings.
-            export_filename(Union[str, None], optional): Name of output file with bar chart, which is saved in the project_folder/images folder, if the output type is set to 'html' or 'svg' in render_settings. Defaults to 'render_progression_bar_chart__{render_settings["separation_unit_amount"]}-{render_settings["separation_unit_type"]}-window'.
+            export_filename(Union[str, None], optional): Name of output file with bar chart, which is saved in the project_folder/images folder, if the output type is set to 'html' or 'svg' in render_settings and no file extension is provided. If a file extension is provided, the export_filename input is taken as a filepath and the chart will be saved there. Defaults to 'render_progression_bar_chart__{render_settings["separation_unit_amount"]}-{render_settings["separation_unit_type"]}-window'.
         """
         render_settings: dict = self.default_render_progression_bar_chart_settings if not render_progression_bar_chart_settings else render_progression_bar_chart_settings
         export_filename: str = export_filename if export_filename else f'render_progression_bar_chart__{render_settings["separation_unit_amount"]}-{render_settings["separation_unit_type"]}-window'
@@ -995,20 +1000,30 @@ class AnnotationAnalyzer(CanspinProject):
 
         def _write_html(bar_chart_object: plotly.graph_objects.Figure) -> None:
             html_str: str = bar_chart_object.to_html()
-            html_filepath_str: str = os.path.join(abs_local_save_path, 'images', f'{export_filename}.html')
+            html_filepath_str: str = os.path.join(abs_local_save_path, 'images', f'{export_filename}.html') \
+                                     if '.html' not in export_filename \
+                                     else export_filename
 
             if (os.path.isfile(html_filepath_str)):
                 logger.info(f'HTML file {html_filepath_str} already exists and will be overwritten.')
+
+            if (os.path.dirname(html_filepath_str)) and not (os.path.isdir(os.path.dirname(html_filepath_str))):
+                makedir_if_necessary(os.path.dirname(html_filepath_str))
 
             with open(html_filepath_str, 'w') as file:
                 file.write(html_str)
                 logger.info(f'HTML file {html_filepath_str} successfully created.')
 
         def _write_svg(bar_chart_object: plotly.graph_objects.Figure, render_engine: str) -> None:
-            svg_file_str: str = os.path.join(abs_local_save_path, 'images', f'{export_filename}.svg')
+            svg_file_str: str = os.path.join(abs_local_save_path, 'images', f'{export_filename}.svg') \
+                                if '.svg' not in export_filename \
+                                else export_filename
 
             if (os.path.isfile(svg_file_str)):
                 logger.info(f'SVG file {svg_file_str} already exists and will be overwritten.')
+            
+            if (os.path.dirname(svg_file_str)) and not (os.path.isdir(os.path.dirname(svg_file_str))):
+                makedir_if_necessary(os.path.dirname(svg_file_str))
 
             # falls unter Windows 11 die svg-Erzeugung ohne Fehlermeldung nicht zum Abschluss kommt, verwendet als Engine "Orca":
             # write_image(file=svg_file_str, engine='orca'); installiert dafür das Paket "plotly-orca" via conda oder pip
