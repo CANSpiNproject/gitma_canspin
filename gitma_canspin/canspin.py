@@ -582,7 +582,9 @@ class AnnotationAnalyzer(CanspinProject):
             # category_and_class_system_name (str): select which category and classes should be selected in self.category_and_class_systems
             'category_and_class_system_name': 'CS1 v1.1.0 deu',
             # translate_classes_to_english (bool): based on the category_and_class_system_name the classes can be translated to English if a translation dict for this class system and language exists
-            'translate_classes_to_english': False
+            'translate_classes_to_english': False,
+            # save_data_to_json (bool): save the data calculated for the chart together with relevant settings to a json file
+            'save_data_to_json': False
         }
         self.default_render_overview_pie_chart_settings: dict = {
             # category_and_class_system_name (str): select which category and classes should be selected in self.category_and_class_systems
@@ -908,7 +910,7 @@ class AnnotationAnalyzer(CanspinProject):
         Args:
             input_data: Union[pd.DataFrame, List[str]]: Designed to take a pandas dataframe from the CanspinProject's self.tsv_annotations dict or one or more tsv files.
             render_progression_bar_chart_settings(Union[dict, None], optional): Delivers custom settings for data visualization and output. Defaults to self.default_render_progression_bar_chart_settings.
-            export_filename(Union[str, None], optional): Name of output file with bar chart, which is saved in the project_folder/images folder, if the output type is set to 'html' or 'svg' in render_settings and no file extension is provided. If a file extension is provided, the export_filename input is taken as a filepath and the chart will be saved there. Defaults to 'render_progression_bar_chart__{render_settings["separation_unit_amount"]}-{render_settings["separation_unit_type"]}-window'.
+            export_filename(Union[str, None], optional): Name of output file with bar chart, which is saved in the project_folder/images folder, if the output type is set to 'html' or 'svg' in render_settings and no file extension is provided. If a file extension is provided, the export_filename input is taken as a filepath and the chart will be saved there as well as the data json export, if the render setting 'save_data_to_json' is activated. Defaults to 'render_progression_bar_chart__{render_settings["separation_unit_amount"]}-{render_settings["separation_unit_type"]}-window'.
         """
         render_settings: dict = self.default_render_progression_bar_chart_settings if not render_progression_bar_chart_settings else render_progression_bar_chart_settings
         export_filename: str = export_filename if export_filename else f'render_progression_bar_chart__{render_settings["separation_unit_amount"]}-{render_settings["separation_unit_type"]}-window'
@@ -981,6 +983,25 @@ class AnnotationAnalyzer(CanspinProject):
 
         transformed_data_df: pd.DataFrame = transformation_methods[render_settings['separation_unit_type']](tsv_data_df)
 
+        if render_settings['save_data_to_json']:
+            json_export_filepath: str = os.path.join(abs_local_save_path, 'data', f'{export_filename}.json') \
+                                        if not bool(len([extension for extension in ['.html', '.svg'] if extension in export_filename])) \
+                                        else f'{export_filename}.json'
+
+            export_json_data: dict = transformed_data_df.to_dict()
+            export_json_data.update({'METADATA': render_settings})
+            json_file_str: str = json.dumps(export_json_data, indent=2, sort_keys=False, ensure_ascii=False)
+
+            if (os.path.isfile(json_export_filepath)):
+                logger.info(f'JSON file {json_export_filepath} already exists and will be overwritten.')
+
+            if (os.path.dirname(json_export_filepath)) and not (os.path.isdir(os.path.dirname(json_export_filepath))):
+                makedir_if_necessary(os.path.dirname(json_export_filepath))
+
+            with open(json_export_filepath, 'w') as file:
+                file.write(json_file_str)
+                logger.info(f'JSON file {json_export_filepath} successfully created.')
+
         fig: plotly.graph_objects.Figure = px.bar(
             data_frame=transformed_data_df,
             x='Text_Unit',
@@ -991,9 +1012,6 @@ class AnnotationAnalyzer(CanspinProject):
             height=render_settings['height']
         ).update_layout(xaxis_title='text units', yaxis_title='annotation amount', legend_title='annotation classes', font={'size': render_settings['font_size']})
     
-        if render_settings['output_type'] != 'show':
-            makedir_if_necessary(os.path.join(abs_local_save_path, 'images'))
-
         def _show_chart(bar_chart_object: plotly.graph_objects.Figure) -> None:
             logger.info(f'Showing bar chart with separation unit type={render_settings["separation_unit_type"]} and separation unit amount={render_settings["separation_unit_amount"]}. The last text unit contains {_my_globals["last_text_unit_amount"]} {render_settings["separation_unit_type"]}s.')
             bar_chart_object.show()
@@ -1015,20 +1033,20 @@ class AnnotationAnalyzer(CanspinProject):
                 logger.info(f'HTML file {html_filepath_str} successfully created.')
 
         def _write_svg(bar_chart_object: plotly.graph_objects.Figure, render_engine: str) -> None:
-            svg_file_str: str = os.path.join(abs_local_save_path, 'images', f'{export_filename}.svg') \
+            svg_filepath_str: str = os.path.join(abs_local_save_path, 'images', f'{export_filename}.svg') \
                                 if '.svg' not in export_filename \
                                 else export_filename
 
-            if (os.path.isfile(svg_file_str)):
-                logger.info(f'SVG file {svg_file_str} already exists and will be overwritten.')
+            if (os.path.isfile(svg_filepath_str)):
+                logger.info(f'SVG file {svg_filepath_str} already exists and will be overwritten.')
             
-            if (os.path.dirname(svg_file_str)) and not (os.path.isdir(os.path.dirname(svg_file_str))):
-                makedir_if_necessary(os.path.dirname(svg_file_str))
+            if (os.path.dirname(svg_filepath_str)) and not (os.path.isdir(os.path.dirname(svg_filepath_str))):
+                makedir_if_necessary(os.path.dirname(svg_filepath_str))
 
             # falls unter Windows 11 die svg-Erzeugung ohne Fehlermeldung nicht zum Abschluss kommt, verwendet als Engine "Orca":
             # write_image(file=svg_file_str, engine='orca'); installiert dafür das Paket "plotly-orca" via conda oder pip
-            bar_chart_object.write_image(file=svg_file_str, engine=render_engine)
-            logger.info(f'SVG file {svg_file_str} successfully created.')
+            bar_chart_object.write_image(file=svg_filepath_str, engine=render_engine)
+            logger.info(f'SVG file {svg_filepath_str} successfully created.')
 
         output_methods: dict = {
             'show': [_show_chart, {'bar_chart_object': fig}],
@@ -2566,13 +2584,16 @@ class AnnotationAnalyzer(CanspinProject):
 
         # safe result to file if the respective parameter is a string
         if safe_result_to_file and isinstance(safe_result_to_file, str):
-            export_filepath: str = os.path.join(abs_local_save_path, f'{safe_result_to_file}.json') \
+            export_filepath: str = os.path.join(abs_local_save_path, 'data', f'{safe_result_to_file}.json') \
                                    if '.json' not in safe_result_to_file \
                                    else safe_result_to_file
             json_file_str: str = json.dumps(result, indent=2, sort_keys=False, ensure_ascii=False)
 
             if (os.path.isfile(export_filepath)):
                 logger.info(f'JSON file {export_filepath} already exists and will be overwritten.')
+
+            if (os.path.dirname(export_filepath)) and not (os.path.isdir(os.path.dirname(export_filepath))):
+                makedir_if_necessary(os.path.dirname(export_filepath))
 
             with open(export_filepath, 'w') as file:
                 file.write(json_file_str)
