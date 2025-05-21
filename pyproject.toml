@@ -1,0 +1,53 @@
+[project]
+name = "gitma_canspin"
+version = "1.6.4"
+requires-python = "== 3.10.*"
+dependencies = [
+    "cvxopt == 1.3.2",
+    "jupyter == 1.1.*",
+    "kaleido == 0.2.*",
+    "lxml == 5.3.*",
+    "networkx == 3.4.*",
+    "nltk == 3.9.*",
+    "numpy == 2.0.*",
+    "pandas == 2.2.*",
+    "plotly == 5.24.*",
+    "pygal == 3.0.*",
+    "pygamma-agreement == 0.5.*",
+    "pygit2 == 1.16.*",
+    "python-gitlab == 5.1.*",
+    "scipy == 1.14.*",
+    "spacy == 3.8.*",
+    "streamlit == 1.41.*",
+    "streamlit-annotation-tools == 1.0.*",
+    "tabulate == 0.9.*"
+]
+authors = [
+  {name = "Marc Lemke", email = "marc.lemke@uni-rostock.de"},
+  {name = "Nils Kellner", email = "nils.kellner@uni-rostock.de"},
+  {name = "Julián C. Spinelli"},
+]
+readme = "README.md"
+license = "GPL-3.0-or-later"
+description = "gitma 2.0.1 fork for project specific needs of the CANSpiN project"
+
+[project.optional-dependencies]
+testing = [
+    "pytest == 8.3.*",
+    "pytest-cov == 6.0.*",
+]
+
+[project.urls]
+Homepage = "https://www.canspin.uni-rostock.de/en"
+Repository = "https://github.com/CANSpiNproject/gitma-canspin.git"
+
+[project.scripts]
+gui-start = "gitma_canspin.scripts.gitma_CANSpiN:run"
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools ~=63.2.0",
+    "wheel ~=0.37.1",
+]
+
