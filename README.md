@@ -50,7 +50,7 @@ The repository is used to adapt [GitMA](https://github.com/forTEXT/gitma) 2.0.1 
 If there is a new version in the online repository, download the changes (`git pull`). The updated state is then immediately available in the pip package. The kernel of a previously loaded Jupyter Notebook accessing the package would need to be restarted. Only to update the version number displayed with `pip list` is it necessary to re-execute `pip install -e .` in the package folder.
 
 ## Testing
-The unit and integration tests are currently being developed. To run the tests, start pytest in the package folder `gitma-canspin`: `pytest`.
+The unit and integration tests are currently being developed. To run the tests, install the optional testing packages in the repository folder `gitma-canspin`: `pip install -e .[testing]`. After that, you can start pytest from the same folder: `pytest`.
 
 ## Getting started
 The package *gitma_canspin* is designed to handle multi-class annotations, i.e. every token of a text can only be assigned to one class. Based on that, you can use *gitma_canspin* for exporting [Catma](https://catma.de/) annotation data into `.tsv` and TEI-conform `.xml` files with inline annotations, for computing statistical data about annotations, creating visualizations, calculating inter-annotator agreements and creating goldstandard annotation collections.
