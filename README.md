@@ -33,13 +33,14 @@ The repository is used to adapt [GitMA](https://github.com/forTEXT/gitma) 2.0.1 
 
 ### Windows
 - Create and activate a virtual environment via `conda` with Python 3.10: `conda create -n name_environment python=3.10` and `conda activate name_environment`.
+- Update `pip` and `setuptools`: `pip install -U pip setuptools`.
 - Clone the repository into a project folder: `git clone https://github.com/CANSpiNproject/gitma_canspin.git`.
-- Change to the repository folder in the terminal and install the necessary packages as well as the packages itself: `pip install -r requirements.txt && pip install -e .`.
+- Change to the repository folder in the terminal and install the necessary packages as well as the packages itself: `pip install -e .`.
 - If there are problems with the `cvxopt` package, install it via `conda` and the package resource `conda-forge`:
   - Add `conda-forge` as a package resource in your `conda`: `conda config --add channels conda-forge`.
   - Set the priority for the `conda-forge` channel: `conda config --set channel_priority strict`.
   - Install `cvxopt` via `conda`: `conda install cvxopt==1.3.2`.
-  - Retry installing `gitma_CANSpiN` as described in step 3.
+  - Retry installing `gitma_CANSpiN` as described in step 4.
 
 ### Ubuntu
 - Proceed in the same way as for the Windows installation. If you do not want to use `conda`, but `venv`, for example, make sure you use Python version 3.10.
