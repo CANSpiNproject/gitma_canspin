@@ -46,6 +46,6 @@ keywords:
   - CATMA
   - Annotation
 license: GPL-3.0
-commit: 8293dcb37a65b7311e364b3bd6b37ea5d852d2a0
+commit: bfe791d9394120fc5bfd6cc760f2a51505ae2c11
 version: 1.6.5
-date-released: '2025-05-21'
+date-released: '2025-05-22'
