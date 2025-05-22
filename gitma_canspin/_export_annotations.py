@@ -359,5 +359,5 @@ def create_annotated_tei(
     tree_string = etree.tostring(element_or_tree=tree, pretty_print=True, xml_declaration=True, encoding='utf-8').decode()
     tree_string = _fix_punctuation(tree_string)
 
-    with open(f'{created_file_name}.xml', 'w') as export_file:
+    with open(f'{created_file_name}.xml', 'w', encoding='utf-8') as export_file:
         export_file.write(tree_string)

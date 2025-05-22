@@ -891,7 +891,7 @@ class AnnotationAnalyzer(CanspinProject):
         if (os.path.dirname(html_filepath_str)) and not (os.path.isdir(os.path.dirname(html_filepath_str))):
             makedir_if_necessary(os.path.dirname(html_filepath_str))
 
-        with open(html_filepath_str, 'w') as file:
+        with open(html_filepath_str, 'w', encoding='utf-8') as file:
             file.write(html_str)
             logger.info(f'HTML file {html_filepath_str} successfully created.')
             
@@ -998,7 +998,7 @@ class AnnotationAnalyzer(CanspinProject):
             if (os.path.dirname(json_export_filepath)) and not (os.path.isdir(os.path.dirname(json_export_filepath))):
                 makedir_if_necessary(os.path.dirname(json_export_filepath))
 
-            with open(json_export_filepath, 'w') as file:
+            with open(json_export_filepath, 'w', encoding='utf-8') as file:
                 file.write(json_file_str)
                 logger.info(f'JSON file {json_export_filepath} successfully created.')
 
@@ -1028,7 +1028,7 @@ class AnnotationAnalyzer(CanspinProject):
             if (os.path.dirname(html_filepath_str)) and not (os.path.isdir(os.path.dirname(html_filepath_str))):
                 makedir_if_necessary(os.path.dirname(html_filepath_str))
 
-            with open(html_filepath_str, 'w') as file:
+            with open(html_filepath_str, 'w', encoding='utf-8') as file:
                 file.write(html_str)
                 logger.info(f'HTML file {html_filepath_str} successfully created.')
 
@@ -2595,7 +2595,7 @@ class AnnotationAnalyzer(CanspinProject):
             if (os.path.dirname(export_filepath)) and not (os.path.isdir(os.path.dirname(export_filepath))):
                 makedir_if_necessary(os.path.dirname(export_filepath))
 
-            with open(export_filepath, 'w') as file:
+            with open(export_filepath, 'w', encoding='utf-8') as file:
                 file.write(json_file_str)
                 logger.info(f'JSON file {export_filepath} successfully created.')
 

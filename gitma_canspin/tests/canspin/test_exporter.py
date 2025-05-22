@@ -34,7 +34,7 @@ class TestExporter:
             assert os.path.exists(filepath)
         for filename in ['basic_token_table.tsv', 'annotated_token_table.tsv']:
             filepath = os.path.join(request.fspath.dirname, filename)
-            with open(filepath) as file_stream:
+            with open(filepath, 'r', encoding='utf-8') as file_stream:
                 tsv_data = [row for row in csv.reader(file_stream, delimiter="\t")]
                 assert tsv_data[0][0] == 'Token_ID'
                 assert tsv_data[0][1] == 'Text_Pointer'

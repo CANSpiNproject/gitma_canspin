@@ -39,7 +39,7 @@ class Main:
     def load_projects(self) -> List[dict]:
         makedir_if_necessary(os.path.join(abs_local_save_path, 'gui_configs'))
         self.make_projects_config_if_necessary()
-        with open(projects_json_filepath) as file:
+        with open(projects_json_filepath, 'r', encoding='utf-8') as file:
             return json.load(file)
 
     # content methods used in self.show
