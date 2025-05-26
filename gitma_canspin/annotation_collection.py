@@ -485,7 +485,8 @@ class AnnotationCollection:
         created_file_name: str = 'basic_token_table',
         spacy_model_lang: str = 'German',
         text_borders: Union[Tuple[int, int], None] = None,
-        nlp_max_text_len: Union[int, None] = None):
+        nlp_max_text_len: Union[int, None] = None,
+        debug_tokenization: bool = False):
         """Takes a CATMA `AnnotationCollection`, writes a basic token tsv file with Token_ID, Text_Pointer and Token columns.
         
         Args:
@@ -493,8 +494,9 @@ class AnnotationCollection:
             spacy_model_lang (str, optional): a spacy model selected by language ('German', 'English', 'Multilingual', 'French', 'Spanish'). Defaults to 'German'.
             text_borders (tuple, optional): cut off delivered text by begin and end value of text string.
             nlp_max_text_len (int, optional): specifies spacys accepted max text length for tokenization.
+            debug_tokenization (bool, optional): activate print out of token and applied tokenization rules. Defaults to False.
         """
-        create_basic_token_tsv(ac=self, created_file_name=created_file_name, spacy_model_lang=spacy_model_lang, text_borders=text_borders, nlp_max_text_len=nlp_max_text_len)
+        create_basic_token_tsv(ac=self, created_file_name=created_file_name, spacy_model_lang=spacy_model_lang, text_borders=text_borders, nlp_max_text_len=nlp_max_text_len, debug_tokenization=debug_tokenization)
     
     def create_annotated_token_tsv(
         self,

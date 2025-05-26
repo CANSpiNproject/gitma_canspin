@@ -10,14 +10,15 @@ from typing import Union, Tuple, List, Dict
 import logging
 logger = logging.getLogger(__name__)
 
-def get_spacy_df(text: str, spacy_model_lang: str = 'German', nlp_max_text_len: int = None) -> pd.DataFrame:
+def get_spacy_df(text: str, spacy_model_lang: str = 'German', nlp_max_text_len: int = None, debug_tokenization: bool = False) -> pd.DataFrame:
     """Generates a table with the token and their position in the given text by using `spacy`.
 
     Args:
         text (str): Any text.
         spacy_model_lang (str, optional): a spacy model selected by language ('German', 'English', 'Multilingual', 'French', 'Spanish'). Defaults to 'German'.
         nlp_max_text_len (str, optional): a custom value for spacys max_length property defining how long a text could be which is to be tokenized. Defaults to None, spacys default value is 1000000.
-
+        debug_tokenization (bool, optional): activate print out of token and applied tokenization rules. Defaults to False.
+        
     Returns:
         pd.DataFrame: `pandas.DataFrame` with 3 columns:\n
             - 'Token_ID': index of token in tokenized text
@@ -43,6 +44,12 @@ def get_spacy_df(text: str, spacy_model_lang: str = 'German', nlp_max_text_len: 
         nlp.add_pipe("sentencizer")
     nlp.max_length = nlp_max_text_len if nlp_max_text_len else nlp.max_length
     doc = nlp(text)
+
+    if debug_tokenization:
+        tok_exp = nlp.tokenizer.explain(text)
+        assert [t.text for t in doc if not t.is_space] == [t[1] for t in tok_exp]
+        for t in tok_exp:
+            print(t[1], "\t", t[0])
 
     lemma_list = []
 
@@ -104,7 +111,8 @@ def create_basic_token_tsv(
         created_file_name: str = 'basic_token_table',
         spacy_model_lang: str = 'German',
         text_borders: Union[Tuple[int, int], None] = None,
-        nlp_max_text_len: Union[int, None] = None) -> None:
+        nlp_max_text_len: Union[int, None] = None,
+        debug_tokenization: bool = False) -> None:
     """Takes a CATMA `AnnotationCollection` and writes a basic token tsv file with Token_ID, Text_Pointer and Token columns.
 
     Args:
@@ -113,12 +121,14 @@ def create_basic_token_tsv(
         spacy_model_lang (str, optional): a spacy model selected by language ('German', 'English', 'Multilingual', 'French', 'Spanish'). Defaults to 'German'.
         text_borders (tuple, optional): cut off delivered text by begin and end value of text string. Defaults to None.
         nlp_max_text_len (int, optional): specify spacys accepted max text length for tokenization. Defaults to None.
+        debug_tokenization (bool, optional): activate print out of token and applied tokenization rules. Defaults to False.
     """
     text = ac.text.plain_text[text_borders[0]:text_borders[1]] if text_borders else ac.text.plain_text
 
     lemma_df: pd.DataFrame = get_spacy_df(text=text,
                                           spacy_model_lang=spacy_model_lang,
-                                          nlp_max_text_len=nlp_max_text_len)
+                                          nlp_max_text_len=nlp_max_text_len,
+                                          debug_tokenization=debug_tokenization)
         
     # keep linebreaks for tsv export
     lemma_df.loc[:, 'Token'] = lemma_df['Token'].apply(lambda x: x.replace('\n', '\\n'))
