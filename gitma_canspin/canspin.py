@@ -376,8 +376,7 @@ class AnnotationExporter(CanspinProject):
             'text_borders': None,
             'insert_paragraphs': True,
             'paragraph_recognition_text_class': 'eltec-deu',
-            'use_all_text_selection_segments': True,
-            'debug_tokenization': False
+            'use_all_text_selection_segments': True
         }
         self.default_steps: Dict[str, dict] = {
             'create_basic_token_tsv': {
@@ -467,8 +466,7 @@ class AnnotationExporter(CanspinProject):
                     'created_file_name': self.steps['create_basic_token_tsv']['output_tsv_file_name'],
                     'spacy_model_lang': self.processing_settings['spacy_model_lang'],
                     'text_borders': self.processing_settings['text_borders'],
-                    'nlp_max_text_len': self.processing_settings['nlp_max_text_len'],
-                    'debug_tokenization': self.processing_settings['debug_tokenization']
+                    'nlp_max_text_len': self.processing_settings['nlp_max_text_len']
                 }
             ),
             'create_annotated_token_tsv': (

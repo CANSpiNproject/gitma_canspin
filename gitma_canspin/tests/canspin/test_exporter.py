@@ -24,8 +24,7 @@ class TestExporter:
             'text_borders': (898, 35443),
             'insert_paragraphs': True,
             'paragraph_recognition_text_class': 'eltec-deu',
-            'use_all_text_selection_segments': True,
-            'debug_tokenization': False
+            'use_all_text_selection_segments': True
         }
         exporter.run()
 
