@@ -24,24 +24,37 @@ def get_spacy_df(text: str, spacy_model_lang: str = 'German', nlp_max_text_len: 
             - 'Token_Index': a text pointer for the start point of the token
             - 'Token': the token
     """
+    def _fix_spanish_tokenization(loaded_model: spacy.Language) -> None:
+        """Helper function to fix tokenization of spanish texts by adding recognition of leading hyphens as tokens.
+
+        Args:
+            loaded_model (spacy.Language): The model loaded with spacys load method whose tokenization you want to customize.
+        """
+        all_prefixes_re = spacy.util.compile_prefix_regex(tuple(list(nlp.Defaults.prefixes) + ['-']))
+        loaded_model.tokenizer.prefix_search = all_prefixes_re.search
+    
     lang_dict = {
-        'German': 'de_core_news_sm',
-        'English': 'en_core_web_sm',
-        'Multilingual': 'xx_ent_wiki_sm',
-        'French': 'fr_core_news_sm',
-        'Spanish': 'es_core_news_sm'
+        'German': {'model': 'de_core_news_sm', 'customizations': None},
+        'English': {'model': 'en_core_web_sm', 'customizations': None},
+        'Multilingual': {'model': 'xx_ent_wiki_sm', 'customizations': None},
+        'French': {'model': 'fr_core_news_sm', 'customizations': None},
+        'Spanish': {'model': 'es_core_news_sm', 'customizations': _fix_spanish_tokenization}
     }
     
     try:
-        nlp = spacy.load(lang_dict[spacy_model_lang])
+        nlp = spacy.load(lang_dict[spacy_model_lang]['model'])
     except OSError:
-        logger.info(f'Downloading spacy model "{lang_dict[spacy_model_lang]}" for tokenization...')
+        logger.info('Downloading spacy model "' + lang_dict[spacy_model_lang]['model'] + '" for tokenization...')
         from spacy.cli import download
-        download(lang_dict[spacy_model_lang])
-        nlp = spacy.load(lang_dict[spacy_model_lang])
+        download(lang_dict[spacy_model_lang]['model'])
+        nlp = spacy.load(lang_dict[spacy_model_lang]['model'])
     if spacy_model_lang == "Multilingual":
         nlp.add_pipe("sentencizer")
     nlp.max_length = nlp_max_text_len if nlp_max_text_len else nlp.max_length
+    
+    if lang_dict[spacy_model_lang]['customizations']:
+        lang_dict[spacy_model_lang]['customizations'](nlp)
+    
     doc = nlp(text)
 
     tok_exp = nlp.tokenizer.explain(text)
