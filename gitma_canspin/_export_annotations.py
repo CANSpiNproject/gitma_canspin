@@ -30,7 +30,7 @@ def get_spacy_df(text: str, spacy_model_lang: str = 'German', nlp_max_text_len: 
         Args:
             loaded_model (spacy.Language): The model loaded with spacys load method whose tokenization you want to customize.
         """
-        all_prefixes_re = spacy.util.compile_prefix_regex(tuple(list(nlp.Defaults.prefixes) + ['-']))
+        all_prefixes_re = spacy.util.compile_prefix_regex(tuple(list(nlp.Defaults.prefixes) + ['-','‐','˗','‒','–','—','―','−','─']))
         loaded_model.tokenizer.prefix_search = all_prefixes_re.search
     
     lang_dict = {
