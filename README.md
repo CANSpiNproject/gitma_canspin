@@ -57,7 +57,7 @@ The package *gitma_canspin* is designed to handle multi-class annotations, i.e. 
 
 Currently, a **Streamlit** app is being added to the package that allows all the features of the *canspin* module to be used in a GUI. Once the virtual environment is activated, the app can be started from every folder in the terminal: `gui-start`. Independently of the reference to the Streamlit app, step-by-step instructions for creating your own Jupyter Notebooks and scripts now follow. Three classes are currently provided for working with the package: [AnnotationExporter](#annotationexporter), [AnnotationAnalyzer](#annotationanalyzer) and [AnnotationManipulator](#annotationmanipulator). All three depend on a Catma project being loaded first. This is demonstrated below using the loading of an exporter.
 
-- To code along, first of all place the folders of the [DH2025 repository](https://github.com/CANSpiNproject/dh2025.git) inside your project folder. Then create a new Python script or a Jupyter Notebook in the project folder. The folder structure should look like this:
+- To code along, first of all place the content of the [DH2025 repository](https://github.com/CANSpiNproject/dh2025.git) inside your project folder. Then create a new Python script or a Jupyter Notebook in the project folder. The folder structure should look like this:
     ```
     <project folder>
       <assets>
@@ -142,9 +142,9 @@ This class is designed to export CATMA annotations into `.tsv` and TEI-conform `
       <novel_beginning_analysis>
       <results>
       .gitignore
-      annotated_tei.xml
-      annotated_token_table.tsv
-      basic_token_table.tsv
+      annotated_tei.xml <----------
+      annotated_token_table.tsv <----------
+      basic_token_table.tsv <----------
       bibliography.bib
       CITATION.cff
       my_script.py
