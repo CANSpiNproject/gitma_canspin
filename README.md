@@ -60,15 +60,22 @@ Currently, a **Streamlit** app is being added to the package that allows all the
 - To code along, first of all place the folders of the [DH2025 repository](https://github.com/CANSpiNproject/dh2025.git) inside your project folder. Then create a new Python script or a Jupyter Notebook in the project folder. The folder structure should look like this:
     ```
     <project folder>
-      <CATMA_4AA4ADC0-4C28-54F9-B6A1-5DCEFF34B90B_DH2025_CANSpiN>
+      <assets>
       <canspin-deu-19>
       <canspin-deu-20>
       <canspin-spa-19>
       <canspin-lat-19>
+      <CATMA_4AA4ADC0-4C28-54F9-B6A1-5DCEFF34B90B_DH2025_CANSpiN>
       <gitma-canspin>
+      <novel_beginning_analysis>
       <results>
+      .gitignore
+      bibliography.bib
+      CITATION.cff
       my_script.py
       my_notebook.ipynb
+      perform_analysis.ipynb
+      README.md
     ```
 - In the new Python file: Import the `AnnotationExporter` class from *canspin* module of *gitma_canspin*:
     ```python
@@ -125,18 +132,25 @@ This class is designed to export CATMA annotations into `.tsv` and TEI-conform `
     With this, apart from the `text_borders`, the default settings (stored in exporter.processing_settings) are used and three files are created in the project folder: `basic_token_table.tsv`, `annotated_token_table.tsv` and `annotated_tei.xml`.
     ```
     <project folder>
-      <CATMA_4AA4ADC0-4C28-54F9-B6A1-5DCEFF34B90B_DH2025_CANSpiN>
+      <assets>
       <canspin-deu-19>
       <canspin-deu-20>
       <canspin-spa-19>
       <canspin-lat-19>
+      <CATMA_4AA4ADC0-4C28-54F9-B6A1-5DCEFF34B90B_DH2025_CANSpiN>
       <gitma-canspin>
+      <novel_beginning_analysis>
       <results>
+      .gitignore
       annotated_tei.xml
       annotated_token_table.tsv
       basic_token_table.tsv
+      bibliography.bib
+      CITATION.cff
       my_script.py
       my_notebook.ipynb
+      perform_analysis.ipynb
+      README.md
     ```
 
 #### All configuration options
